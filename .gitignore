@@ -1,2 +1,4 @@
 *.pdf
 *.doc
+temp/*.aux
+temp/*.log

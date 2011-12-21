@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.11.30)  21 DEC 2011 09:19
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.11.30)  21 DEC 2011 09:28
 entering extended mode
 **doc.tex
 (L:\eelco\yakindu\doc.tex
@@ -160,8 +160,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 33.
  (L:\eelco\yakindu\abstract.ltx)
-(L:\eelco\yakindu\body.ltx (L:\eelco\yakindu\1-intro.ltx))
-(L:\eelco\yakindu\doc.bbl
+(L:\eelco\yakindu\body.ltx (L:\eelco\yakindu\1-intro.ltx
+Overfull \hbox (6.70941pt too wide) in paragraph at lines 11--15
+[][]\OT1/cmr/m/n/10 SOlution with Yakindu A set of pre-de-fined com-monly used 
+mod-el-ing paradigms
+ []
+
+)) (L:\eelco\yakindu\doc.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
@@ -172,7 +177,7 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 Here is how much of TeX's memory you used:
  649 strings out of 494019
  7749 string characters out of 3141698
- 60438 words of memory out of 3000000
+ 62438 words of memory out of 3000000
  3984 multiletter control sequences out of 15000+200000
  6981 words of font info for 25 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -184,7 +189,7 @@ type1/public/amsfonts/cm/cmr10.pfb><C:/data/javadev/commonTools/miktex-2.9/font
 s/type1/public/amsfonts/cm/cmr6.pfb><C:/data/javadev/commonTools/miktex-2.9/fon
 ts/type1/public/amsfonts/cm/cmr7.pfb><C:/data/javadev/commonTools/miktex-2.9/fo
 nts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on doc.pdf (1 page, 68581 bytes).
+Output written on doc.pdf (1 page, 77289 bytes).
 PDF statistics:
  30 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

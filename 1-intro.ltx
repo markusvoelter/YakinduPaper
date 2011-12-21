@@ -1,5 +1,43 @@
 \section{Introduction}
 
+Problem
+Today's embedded software modeling tools have problems:
+- Not Extensible in domain-specific ways
+- Often one-paradigm-per tool -> ijtegratiion
+- Bad Support for Process Issues (PLE, Tracing)
+- Practices of SW Eng (Interface vs.Impl, Specialization, Modualization)
+  not very well supported
+  
+SOlution with Yakindu
+A set of predefined commonly used modeling paradigms that can be 
+extended in domain-specific ways, and making use of state of the art
+sw eng techniques. 
 
+Particularly:
+- Components, State Machines, Block Diagrams
+- ... as modules for custom tools, or in an integrated suite
+- with DSLs for actions and blocks that can be interpreted 
+  (for sim) and generated (to several langs)
+- extensible via custom DSLs in actions, blocks
+- new DSLs can be "attached" via referencing
+
+Multi-Paradigm in the sense that
+- states and blcocks and code
+- graphical and textual
+- declarative DSL in blocks
+- within states and blocks: other 
+
+Sw-Eng
+- Roles: block implementers vs. block wireres
+- inheritance, specialization
+- blocks: sep of ctrl flow vs. data flow
+- tooling: generator anpassen; interpreter und generator; zwieshcnemodell
+- semantik anpassebar
+
+Process Issues
+- TRaceability: RMF, Crema
+- PLE: (da fehlt noch was :-))
+
+Example: HMI Stuff as an instance/DS-adaptation of the tool chain
 
     
