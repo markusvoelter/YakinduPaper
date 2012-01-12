@@ -1,5 +1,58 @@
 \section{Introduction}
 
+\subsection{Context}
+
+Embedded Software is getting more and more important in many products
+It also getting more and more complex
+Time to Market is becoming shorter and shorter
+Effectiveness and Efficiency have to be increased
+
+Implementing a System in C only is not productive enough
+C is low level, dangerous, etc.
+Hence, modeling tools have been broadly adopted in ES
+For a real world-system, many different modeling paradigms
+  are useful -> Multiparadigm Modeling
+
+Currently, modeling tools either
+* address only one paradigm, leading to integration challenges
+  (Simulink et al.)
+* provide many many paradigms that are hard to extend and 
+  overwhelm the user (UML)
+* or are completely open and anything has to be built  
+  from scratch (LWBs) 
+
+
+\subsection{Challenges}  
+If several different paradigms are used, these have to be integrated
+  a single modeling tool
+-> tools need to be open and extensible in meaningful ways
+
+Some aspects of a domain can be expressed with existing, 
+  reusable paradigmes; for others, we need DS abstractions
+-> how can existing paradigms be made reusable in a modular way
+
+Even for these reusable paradigms, there are parts that need to
+  be adapted in a domain-specific way
+-> how can reusable paradigms be extended to include DS parts?
+
+
+\subsection{Contribution}
+We clearly identify areas in ES that can be address with reusable
+  paradigms; and we identify these paradigms
+We identify places where DS abstractions can be benefitial
+We show how DS and reusable stuff can be integrated in a meaningful way
+We demonstrate the approach using an Eclipse based tool called Yakindu
+We use real-world industry examples to demonstrate the approach
+ 
+\subsection{Structure of the Paper}
+
+the boundaries between reusable abstractions 
+  and DS abstractions and how they can be conceptually combined
+  
+  
+
+
+
 Problem
 Today's embedded software modeling tools have problems:
 - Not Extensible in domain-specific ways
