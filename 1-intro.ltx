@@ -2,49 +2,126 @@
 
 \subsection{Context}
 
-Embedded Software is getting more and more important in many products
-It also getting more and more complex
-Time to Market is becoming shorter and shorter
-Effectiveness and Efficiency have to be increased
+Embedded software is an essential ingredient of life today. Airplanes, cars,
+sensors and mobile phones are but a few examples of systems where a significant
+part of the business value derives from software running as part of the
+overall system, sometimes not even noticed by the user. The amount of software
+embedded in devices is growing (see, for example, the German National Roadmap
+for Embedded Systems \cite{ABB+09}). Embedded software development is a
+challenging field, since, in addition to functional requirements, a
+number of strict operational requirements have to be fulfilled as well. These
+include reliability (a device may not be accessible for maintenance after
+delivery), safety (a system may endanger life or property if it fails),
+efficiency (the resources available to the system may be limited) or real-time
+constraints (a system may have to run on a strict schedule prescribed by the
+system's environment). At the same time, the time-to-market of embedded software
+product is getting shorter and shorter, and often, products are developed as
+part of product lines, further increasing the complexity of the overall
+development effort.
 
-Implementing a System in C only is not productive enough
-C is low level, dangerous, etc.
-Hence, modeling tools have been broadly adopted in ES
-For a real world-system, many different modeling paradigms
-  are useful -> Multiparadigm Modeling
+The vast majority of embedded software is implemented in C and C++. However,
+both of these languages, but especially C, have a number of drawbacks, including
+dangerous features (such as unrestricted casting via void pointers), the
+limited support for building custom abstractions while retaining runtime
+efficiency, and the high cost incurred by static analysis of C and C++ code as a
+consequence of the expressive power high degree of flexibility offered by these
+languages. Hence, modeling tools have been broadly adopted in the development of
+embedded software. Widespread examples include \todo{}. For real-world systems, 
+it is not uncommon that several different modeling paradigms are used to
+describe different parts or aspects of the system. This approach is known as
+multi-paradigm modeling. 
 
-Currently, modeling tools either
-* address only one paradigm, leading to integration challenges
-  (Simulink et al.)
-* provide many many paradigms that are hard to extend and 
-  overwhelm the user (UML)
-* or are completely open and anything has to be built  
-  from scratch (LWBs) 
+\todo{Talk about code and analysis gen being an important ingredient to these
+modeling tools}
+
+Today's mainstream modeling tools can be grouped into the following groups:
+\todo{In the following list, provide concrete examples in real-world tools}.
+
+\begin{itemize}
+  \item Single-paradigm modeling tools provide support for one specific modeling
+  paradigm such as state machines or data flow. These tools are often highly
+  optimized and are good at the paradigm they support, but it is often very hard
+  to integrate them with other tools to realize an integrated multi-paradigm
+  environment. Reasons for being hard to integrate include business
+  considerations as well technical limitations.
+  \item General-purpose modeling tools, typically those based on UML, support a
+  wide variety of paradigms. In fact, the variety is typically so wide that they
+  tend to overwhelm the user. The tools, and the underlying modeling languages
+  have to be restricted to remove those aspects that are not required, and they
+  have to be extended to provide \emph{additional} language concepts that are
+  not provided out of the box. While the UML standard supports extension based
+  on profiles, most real-world tools are limited in the way they support
+  extension and customization.
+  \item A third category are meta modeling and language workbenches that support
+  the rapid construction of arbitrary modeling languages. However, these tools
+  come ``empty'' and the required modeling languages typically have to be
+  created from scratch. In spite of the sophisticatedness of these tools, it is
+  still a lot of work to build a complete multi-paradigm modeling solution.
+  Since many embedded software development projects can make use of existing
+  paradigms (with slight adaptations), reimplementing them over and over again
+  is not efficient.
+\end{itemize}
 
 
 \subsection{Challenges}  
-If several different paradigms are used, these have to be integrated
-  a single modeling tool
--> tools need to be open and extensible in meaningful ways
 
-Some aspects of a domain can be expressed with existing, 
-  reusable paradigmes; for others, we need DS abstractions
--> how can existing paradigms be made reusable in a modular way
+Developing a suitable multi-paradigm modeling tool introduces the following
+challenges:
 
-Even for these reusable paradigms, there are parts that need to
-  be adapted in a domain-specific way
--> how can reusable paradigms be extended to include DS parts?
+\begin{itemize}
+  \item The various paradigms must be \emph{integrated}. This includes semantic
+  integration as well as tool integration. Ideally, the various paradigms should
+  be available in a single integrated tool. Semantic integration can mean
+  that different aspects of the same system may be realized with different
+  paradigms, operating on common data structures, or it may mean that the
+  paradigms interact directly, for example, by having a state machine control
+  the configuration of a data flow diagram.
+  \item Even if a paradigm is reusable in principle, the tool must support the
+  ability to \emph{customize} or \emph{extend} some aspects of the paradigm. For example, in a
+  state machine modeling tool, the language used for expressing actions should
+  be exchangable.
+  \item It should also be possible to add \emph{additional} modeling paradigms
+  to the integrated modeling. To be able to do this, the modeling tool should be
+  built on top of a language workbench and be open enough to support semantic
+  and tool-related integration of additional, custom paradigms.
+\end{itemize}
 
 
 \subsection{Contribution}
-We clearly identify areas in ES that can be address with reusable
-  paradigms; and we identify these paradigms
-We identify places where DS abstractions can be benefitial
-We show how DS and reusable stuff can be integrated in a meaningful way
-We demonstrate the approach using an Eclipse based tool called Yakindu
-We use real-world industry examples to demonstrate the approach
+In this paper we describe the implementation of a modeling tool that satisfies
+the challenges above. In particular our contributions are the following:
+
+\begin{itemize}
+  \item We clearly identify the ways in which modeling tools have to be
+  extensible and adaptable. We identify real-world scenarios that require the
+  particular way of extension.
+  \item We explain why and how domain specific abstractions are useful
+  \item We show how domain-specific abstractions may be integrated into a
+  reusable, multi-paradigm modeling tool
+\end{itemize}
+
+In the paper, we demonstrate the concepts based on Yakindu, an
+Eclipse-based toolkit that realizes the conceptual contributions. Finally, we
+use real-world examples to illustrate how this tool was used.
+
  
 \subsection{Structure of the Paper}
+
+Designed for Extensibility (Comm Tools not built for that (structurally) and
+orgnaizationally (doc, support))
+
+Simulink Audioweaver, Black-Box Reuse
+UML Tool: Echte Erweiterung schwierig, vor allem wenn man Dinge weglassen will
+(siehe SysML Tools); Modularisierung von MM
+
+
+
+
+
+
+
+
+
 
 the boundaries between reusable abstractions 
   and DS abstractions and how they can be conceptually combined
